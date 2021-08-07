@@ -9,7 +9,7 @@ jobs:
       steps:
         - uses: actions/checkout@v1
         - name: Run
-          env: # Or as an environment variable
+          env:
             BEAMMP_SECRET_SENTRY_URL: ${{ secrets.BEAMMP_SECRET_SENTRY_URL }}
           run: |
-            echo $BEAMMP_SECRET_SENTRY_URL
+            echo "$BEAMMP_SECRET_SENTRY_URL"
