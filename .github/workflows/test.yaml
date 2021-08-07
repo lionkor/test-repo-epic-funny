@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - 'master'
+jobs:
+    test:
+      name: Run Unit Tests
+      runs-on: ubuntu-18.04
+
+    steps:
+        env: # Or as an environment variable
+          BEAMMP_SECRET_SENTRY_URL: ${{ secrets.BEAMMP_SECRET_SENTRY_URL }}
+      - uses: actions/checkout@v1
+      - name: setup
+      - name: Run Unit tests
+        run: |
+          echo BEAMMP_SECRET_SENTRY_URL
