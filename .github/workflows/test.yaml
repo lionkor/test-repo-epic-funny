@@ -12,4 +12,4 @@ jobs:
           env: # Or as an environment variable
             BEAMMP_SECRET_SENTRY_URL: ${{ secrets.BEAMMP_SECRET_SENTRY_URL }}
           run: |
-            echo BEAMMP_SECRET_SENTRY_URL
+            echo $BEAMMP_SECRET_SENTRY_URL
