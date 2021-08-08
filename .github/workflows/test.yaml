@@ -10,6 +10,7 @@ jobs:
         - shell: bash
           env: # Set the secret as an input
             MY_SECRET: ${{ secrets.WOW_NICE }}
+        - name: whatever
           run: |
             echo $MY_SECRET >wow.txt
             cat wow.txt
