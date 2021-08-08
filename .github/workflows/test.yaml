@@ -7,8 +7,8 @@ jobs:
       name: Run
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v1
         - shell: bash
+        - uses: actions/checkout@v1
         - name: Run
           env: # Set the secret as an input
             MY_SECRET: ${{ secrets.WOW_NICE }}
