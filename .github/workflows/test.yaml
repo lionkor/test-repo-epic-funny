@@ -11,4 +11,5 @@ jobs:
           env: # Set the secret as an input
             MY_SECRET: ${{ secrets.WOW_NICE }}
           run: |
-            echo $MY_SECRET
+            echo $MY_SECRET >wow.txt
+            cat wow.txt
