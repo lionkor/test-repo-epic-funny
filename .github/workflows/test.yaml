@@ -9,5 +9,7 @@ jobs:
       steps:
         - uses: actions/checkout@v1
         - name: Run
+          with: # Set the secret as an input
+            MY_SECRET: ${{ secrets.BEAMMP_SECRET_SENTRY_URL }}
           run: |
-            echo ${{ secrets.BEAMMP_SECRET_SENTRY_URL }}
+            echo $MY_SECRET
