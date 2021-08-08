@@ -8,8 +8,9 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v1
+        - shell: bash
         - name: Run
           env: # Set the secret as an input
-            MY_SECRET: ${{ secrets.BEAMMP_SECRET_SENTRY_URL }}
+            MY_SECRET: ${{ secrets.WOW_NICE }}
           run: |
-            echo "$MY_SECRET"
+            echo $MY_SECRET
